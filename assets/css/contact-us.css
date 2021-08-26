@@ -1,0 +1,23 @@
+.contact-box1{
+    width: 35%;
+    margin-left: auto;
+}
+.contact-box2{
+    width: 60%;
+    background-color: #fff;
+}
+.contact-box__heading{
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--dark-grey);
+    text-transform: uppercase;
+}
+.contact-box__desc{
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: var(--dark-grey);
+    text-transform: uppercase;
+}
+.contact-box__desc--last{
+    margin-bottom: 25px;
+}

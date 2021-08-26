@@ -1,0 +1,124 @@
+.banner{
+    position: relative;
+}
+.banner__heading{
+    padding: 60px 0 60px 0;
+    font-size: 54px;
+    font-family: 'Elsie';
+    font-weight: 900;
+    color: #000;
+    text-align: center;
+}
+.banner-main{
+    width: 68%;
+}
+.banner-sidebar{
+    width: 28%;
+}
+.banner-blog__img-wrapper{
+    width: 45%;
+}
+.banner-blog-content{
+    width: 45%;
+}
+.banner-blog-content__hading{
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-family: 'Elsie';
+    color: #000;
+}
+.banner-blog-content__sub-hading{
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #000;
+    font-weight: 400;
+}
+.banner-blog-content__article{
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: var(--dark-grey);
+    line-height: 1.9;
+    word-spacing: 1px;
+    letter-spacing: 0.3px;
+    font-weight: 400;
+}
+.banner-blog-content__btn{
+    width: 300px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.banner-sidebar__heading{
+    color: var(--dark-grey);
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.sidebar-holder{
+    margin-bottom: 60px;
+}
+.banner-sidebar-box{
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #e9e9e9;
+    box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.4);
+}
+.banner-sidebar-box1{
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+}
+.banner-sidebar-box__img{
+    width: 80px;
+}
+.banner-sidebar-content{
+    width: 75%;
+    padding-left: 15px;
+}
+.banner-sidebar-content__heading{
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 5px;
+}
+.banner-sidebar-content__article{
+    font-size: 10px;
+    color: #000;
+}
+.arrow{
+    width: 15px;
+    height: auto;
+}
+.sidebar-books-wrapper{
+    margin-bottom: 10px;
+}
+/* banner end */
+.toturials{
+    padding-bottom: 70px;
+}
+.toturials-heading-wrapper{
+    align-items: baseline;
+    margin: 0 auto;
+    max-width: 230px;
+    margin-bottom: 70px;
+}
+.toturials-line{
+    width: 70px;
+    height: 2px;
+    background-color: var(--dark-grey);
+}
+.toturials__heading{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--dark-grey);
+}
+.toturials-box{
+    width: 30%;
+}
+.toturials-box__article{
+    font-size: 18px;
+    word-spacing: 1px;
+    letter-spacing: 0.3px;
+    line-height: 1.9;
+    font-weight: 400;
+    color: var(--dark-grey);
+}
