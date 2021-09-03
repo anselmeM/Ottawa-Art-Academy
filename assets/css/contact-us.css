@@ -1,10 +1,16 @@
+.contact-box-wrapper{
+    width: 70%;
+    margin:  0 auto;
+}
 .contact-box1{
-    width: 35%;
-    margin-left: auto;
+    width: 50%;
 }
 .contact-box2{
-    width: 60%;
-    background-color: #fff;
+    width: 40%;
+}
+.contact-box2__img{
+    width: 100%;
+    height: auto;
 }
 .contact-box__heading{
     font-size: 18px;
