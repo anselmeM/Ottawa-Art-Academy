@@ -11,6 +11,7 @@
     <link href="assets/css/home.css" rel="stylesheet">
     <link href="assets/css/craft.css" rel="stylesheet">
     <link href="assets/css/media_queries.css" rel="stylesheet">
+    <link href="assets/css/gsap-animation.css" rel="stylesheet">
 </head>
 <body>
     <div class="body-wrapper">
@@ -87,7 +88,7 @@
                     <div class="our-socials-line"></div>
                 </div>
                 <div class="container">
-                    <h1 class="banner__heading">The skills to master your craft.</h1>
+                    <h1 id="bannerHeading" class="banner__heading">The skills to master your craft.</h1>
                     <div class="banner-wrapper wrapper jst-btw">
                         <div class="banner-main">
                             <div class="banner-blog wrapper jst-btw al-center">
@@ -115,4 +116,79 @@
                                     </div>
                                 </div>
 
-                                <div class="banner-sidebar-box wrapper jst-btw al-center
+                                <div class="banner-sidebar-box wrapper jst-btw al-center">
+                                    <img src="assets/images/banner-sidebar-box__img2.png" alt="New article 2" class="banner-sidebar-box__img">
+                                    <div class="banner-sidebar-content">
+                                        <h6 class="banner-sidebar-content__heading">Instructed</h6>
+                                        <article class="banner-sidebar-content__article">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</article>
+                                    </div>
+                                </div>
+
+                                <div class="banner-sidebar-box wrapper jst-btw al-center">
+                                    <img src="assets/images/banner-sidebar-box__img3.png" alt="New article 3" class="banner-sidebar-box__img">
+                                    <div class="banner-sidebar-content">
+                                        <h6 class="banner-sidebar-content__heading">Workshops</h6>
+                                        <article class="banner-sidebar-content__article">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</article>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+            <section class="toturials">
+                <div class="container">
+                    <div class="toturials-wrapper wrapper">
+                        <div class="toturials-box">
+                            <img src="assets/images/toturials-box__img.jpg" alt="Tutorials image" class="toturials-box__img">
+                            <div class="toturials-box-content">
+                                <h2 class="toturials-box-content__heading">Tutorials</h2>
+                                <article class="toturials-box-content__article">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</article>
+                                <a href="#" class="btn toturials-box-content__btn">VIEW ALL TUTORIALS</a>
+                            </div>
+                        </div>
+                        <div class="toturials-box">
+                            <img src="assets/images/toturials-box__img1.jpg" alt="Tutorials image" class="toturials-box__img">
+                            <div class="toturials-box-content">
+                                <h2 class="toturials-box-content__heading">Workshops</h2>
+                                <article class="toturials-box-content__article">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</article>
+                                <a href="#" class="btn toturials-box-content__btn">VIEW ALL WORKSHOPS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-wrapper wrapper jst-btw">
+                    <div class="footer-left">
+                        <p class="footer-left__text">© 2023 Ottawa Creative Academy</p>
+                    </div>
+                    <div class="footer-right">
+                        <ul class="footer-right-list wrapper al-center">
+                            <li class="footer-right-list__item">
+                                <a href="#" class="footer-right-list__link">Privacy Policy</a>
+                            </li>
+                            <li class="footer-right-list__item">
+                                <a href="#" class="footer-right-list__link">Terms of Use</a>
+                            </li>
+                            <li class="footer-right-list__item mgr-0">
+                                <a href="#" class="footer-right-list__link">Sales and Refunds</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        console.log(gsap);
+        gsap.fromTo("#bannerHeading", {opacity: 0, y: -20}, {opacity: 1, y: 0, duration: 1, ease: "power2.out"});
+    </script>
+</body>
+</html>
