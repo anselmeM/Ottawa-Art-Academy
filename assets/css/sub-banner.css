@@ -1,34 +1,44 @@
-.sub-banner{
-    padding: 110px 0 50px 0;
+.sub-banner {
+    padding: 100px 0 60px 0;
     position: relative;
+    background-color: var(--bg-primary);
 }
-.our-socials--sub-banner{
-    top: 65%;
+
+.our-socials--sub-banner {
+    top: 50%;
 }
-.sub-banner-wrapper{
-    width: 70%;
-    margin:  0 auto;
+
+.sub-banner-wrapper {
+    width: 60%;
+    margin: 0 auto;
     text-align: center;
 }
-.sub-banner__heading{
-    font-size: 45px;
-    font-family: 'Elsie';
-    font-weight: 900;
-    color: var(--dark-grey);
+
+.sub-banner__heading {
+    font-size: 54px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    color: var(--text-primary);
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
 }
-.sub-banner__desc{
-    font-size: 22px;
+
+.sub-banner__desc {
+    font-size: 16px;
     font-weight: 400;
-    color: var(--dark-grey);
+    color: var(--text-secondary);
     text-align: center;
-    margin-bottom: 70px;
-    line-height: 1.9;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
-.sub-banner__line{
-    width: 100%;
-    height: 2px;
-    background-color: var(--dark-grey);
-    margin-bottom: 70px;
+
+.sub-banner__line {
+    width: 80px;
+    height: 1px;
+    background-color: var(--accent-color);
+    margin: 0 auto 30px auto;
 }

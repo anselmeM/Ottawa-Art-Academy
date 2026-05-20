@@ -1,127 +1,340 @@
-.craft-wrapper{
-    max-width: 900px;
+.craft-wrapper {
+    max-width: 1000px;
     margin: 0 auto;
     position: relative;
+    padding-bottom: 60px;
 }
-.craft__heading{
-    font-size: 35px;
-    font-family: 'Elsie';
-    font-weight: 900;
-    color: var(--dark-grey);
+
+.craft__heading {
+    font-size: 40px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    color: var(--text-primary);
     text-align: center;
+    margin-bottom: 60px;
+}
+
+/* alternating layout for rows */
+.craft-content-wrapper {
     margin-bottom: 80px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition-smooth);
 }
-.craft-img__box{
-    margin-bottom: 70px;
+
+.craft-content-wrapper:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--hover-shadow);
+    border-color: var(--accent-color);
 }
-.craft-content-wrapper{
-    margin-bottom: 100px;
+
+/* Alternate flex directions */
+.craft-content-wrapper:nth-of-type(even) {
+    flex-direction: row-reverse;
 }
-.craft-content-wrapper1{
-    padding-bottom: 50px;
-    border-bottom: 1px solid var(--dark-grey);
-    text-align: center;
+
+.craft-content-box1 {
+    width: 40%;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
-.craft__img{
-    max-width: 50%;
+
+.craft-content-box1 img {
+    width: 100%;
     height: auto;
+    object-fit: cover;
+    display: block;
+    transition: var(--transition-smooth);
+    cursor: pointer;
 }
-.craft-content-box1{
-    width: 35%;
+
+.craft-content-wrapper:hover .craft-content-box1 img {
+    transform: scale(1.04);
 }
-.craft-content-box2{
-    width: 60%;
+
+.craft-content-box2 {
+    width: 55%;
 }
-.craft-content-box1__heading{
-    font-size: 30px;
-    font-family: 'Elsie';
-    font-weight: normal;
-    color: var(--dark-grey);
+
+.craft-content-box2__heading {
+    font-size: 32px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
 }
-.craft-content-box2__article{
-    color: var(--dark-grey);
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 0.3px;
-    word-spacing: 1px;
-    line-height: 1.9;
-    margin-bottom: 30px;
+
+.craft-content-box2__article {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
 }
-.craft-content-box2__link{
-    color: var(--dark-grey);
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 0.3px;
-    word-spacing: 1px;
+
+.craft-content-box2__article b {
+    color: var(--accent-color);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    font-size: 13px;
 }
-.craft-content-box2__heading{
-    font-size: 20px;
-    font-family: 'Elsie';
-    font-weight: normal;
-    color: var(--dark-grey);
-    margin-bottom: 15px;
+
+.craft-btn {
+    display: inline-flex;
+    padding: 12px 24px;
+    border-radius: 0;
+    font-size: 13px;
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+    border: 1px solid var(--text-primary);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin-top: 10px;
 }
-.craft-btn{
-    background-color: #fff;
-    border-radius: 40px;
-    height: 60px;
-    width: 230px;
-    color: var(--dark-grey);
-    font-size: 18px;
-    font-weight: 400;
+
+/* Portfolio Filter Menu */
+.portfolio-filter {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
 }
-.footer{
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    padding: 10px 24px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    color: var(--text-secondary);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+    border-color: var(--text-primary);
+}
+
+/* Lightbox Overlay for Art Gallery */
+.gallery-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 20, 22, 0.95);
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.gallery-lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox-content-wrapper {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(0.9);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-lightbox.active .lightbox-content-wrapper {
+    transform: scale(1);
+}
+
+.lightbox-img {
+    max-height: 75vh;
+    max-width: 100%;
+    object-fit: contain;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lightbox-caption {
+    color: #fff;
+    margin-top: 20px;
     text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    line-height: 1;
+    opacity: 0.7;
+    transition: var(--transition-fast);
+}
+
+.lightbox-close:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Enrolment Pricing Cards Layout */
+.enrolment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.craft-pricing {
+    width: 100%;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition-smooth);
+    box-shadow: var(--card-shadow);
     position: relative;
 }
-.white-box{
-    background-color: #fff;
-    border-radius: 40px;
-    height: 60px;
-    max-width: 500px;
-    margin: 0 auto 100px auto;
-    box-shadow: 0px 3px 10px 0px rgb(0, 0, 0, 0.3);
+
+.craft-pricing:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--hover-shadow);
+    border-color: var(--accent-color);
 }
-.footer__heading{
-    font-size: 30px;
-    font-family: 'Elsie';
-    font-weight: 900;
-    color: var(--dark-grey);
-    margin-bottom: 50px;
+
+.craft-pricing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: transparent;
+    transition: var(--transition-smooth);
 }
-.copywrite{
-    color: var(--dark-grey);
+
+.craft-pricing:hover::before {
+    background-color: var(--accent-color);
+}
+
+.craft-pricing__heading {
+    font-size: 28px;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.craft-pricing__desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.craft-pricing-features {
+    margin-bottom: 30px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+}
+
+.craft-pricing-features li {
+    font-size: 13px;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.craft-pricing-features li::before {
+    content: '✓';
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.pricing-row-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+}
+
+.craft-pricing__price-label {
     font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0.3px;
-    word-spacing: 1px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+}
+
+.craft-pricing__price-value {
+    font-size: 32px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+/* Craft Section footer styling */
+.craft-wrapper .footer {
+    border-top: 1px solid var(--border-color);
+    margin-top: 80px;
+    padding-top: 60px;
+    background-color: transparent;
+}
+
+.footer__heading {
+    font-size: 36px;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--text-primary);
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+.footer-article {
     margin-bottom: 30px;
 }
-.craft-pricing{
-    width: 60%;
-    margin: 0 auto 50px auto;
+
+.footer-article address {
+    font-style: normal;
+    font-size: 14px;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
 }
-.craft-pricing__heading{
-    font-size: 30px;
-    color: var(--dark-grey);
-    margin-bottom: 20px;
-    font-weight: 400;
+
+.copywrite {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--text-secondary);
+    text-transform: uppercase;
 }
-.craft-pricing__desc{
-    font-size: 16px;
-    color: var(--dark-grey);
-    margin-bottom: 25px;
-    font-weight: 400;
-    line-height: 1.9;
-}
-.craft-pricing__heading1{
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: var(--dark-grey);
-}
-.craft-pricing__heading-a {
-    font-size: 30px;
-    text-align: center;
-    color: var(--dark-grey);
-    margin-bottom: 30px;
+
+.white-box {
+    display: none; /* Hide old white block placeholder */
 }
