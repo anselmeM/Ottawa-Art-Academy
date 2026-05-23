@@ -39,37 +39,7 @@
     .banner-blog-content {
         width: 50%;
     }
-    .craft-wrapper {
-        max-width: 700px;
-    }
-    .craft__heading {
-        font-size: 30px;
-    }
-    .craft-content-box1__heading {
-        font-size: 26px;
-    }
-    .craft-content-box2__article,.craft-content-box2__link {
-        font-size: 16px;
-        line-height: 1.5;
-    }
-    .craft-content-box2__heading{
-        font-size: 18px;
-    }
-    .craft-btn {
-        border-radius: 30px;
-        height: 50px;
-        width: 200px;
-        font-size: 16px;
-    }
-    .white-box{
-        height: 50px;
-        max-width: 400px;
-        margin-bottom: 70px;
-    }
-    .footer__heading {
-        font-size: 26px;
-        margin-bottom: 50px;
-    }
+    /* Legacy overrides removed — handled by craft.css responsive rules */
     /* home page end */
     .sub-banner__heading {
         font-size: 36px;
@@ -230,76 +200,7 @@
         font-size: 14px;
         line-height: 1.6;
     }
-    .craft__heading {
-        margin-bottom: 40px;
-    }
-    .craft-img__box, .craft-content-wrapper {
-        margin-bottom: 30px;
-    }
-    .craft-content-box1__heading {
-        font-size: 22px;
-    }
-    .craft-content-box2__article {
-        font-size: 14px;
-        line-height: 1.6;
-        margin-bottom: 15px;
-    }
-    .craft-btn {
-        border-radius: 30px;
-        height: 40px;
-        width: 170px;
-        font-size: 15px;
-    }
-    .footer__heading {
-        font-size: 23px;
-        margin-bottom: 30px;
-    }
-    .white-box {
-        height: 40px;
-        margin-bottom: 50px;
-    }
-    .craft-content-wrapper1 {
-        padding-bottom: 30px;
-    }
-    .toturials-heading-wrapper {
-        margin-bottom: 40px;
-    }
-    .sidebar-holder{
-        margin-bottom: 30px;
-    }
-    .our-socials-list__img {
-        width: 15px;
-    }
-    .our-socials-list__link {
-        font-size: 12px;
-    }
-    /* home page end */
-    .craft-content-wrapper--last{
-        margin-bottom: 70px;
-    }
-    .craft-pricing__heading {
-        font-size: 20px;
-    }
-    .craft-pricing__heading-a {
-        font-size: 24px;
-        text-align: center;
-        color: var(--dark-grey);
-        margin-bottom: 30px;
-    }
-    .contact-box-wrapper{
-        flex-wrap: wrap;
-    }
-    .contact-box1{
-        width: 70%;
-        margin: 0 auto 30px auto;
-    }
-    .contact-box2{
-        width: 80%;
-        margin: 0 auto;
-    }
-    .contact-box__desc--last {
-        line-break: anywhere;
-    }
+    /* Legacy overrides removed — handled by craft.css responsive rules */
 }
 @media (max-width: 680px){
     .our-socials {
@@ -361,29 +262,8 @@
         left: auto;
         right: -100px;
     }
-    .craft-wrapper {
-        max-width: 500px;
-    }
-    .white-box {
-        max-width: 350px;
-    }
-    .craft-content-box1{
-        width: 70%;
-        margin: 0 auto 30px auto;
-    }
-    .craft-content-box2{
-        width: 100%;
-    }
-    .craft-content-wrapper{
-        flex-wrap: wrap;
-        margin-bottom: 70px;
-    }
-    /* home page end */
     .sub-banner-wrapper {
         width: 90%;
-    }
-    .craft-pricing {
-        width: 80%;
     }
 }
 @media (max-width: 500px){
@@ -392,24 +272,12 @@
         right: -70px;
     }
     
-    .craft-wrapper {
-        max-width: 400px;
-    }
-    .white-box {
-        max-width: 320px;
-    }
     .our-socials {
         display: none;
     }
     .nav-list {
         position: absolute;
         width: 100%;
-    }
-    .craft-pricing__desc {
-        font-size: 14px;
-    }
-    .craft-pricing {
-        width: 90%;
     }
 }
 @media (max-width: 400px){
@@ -421,11 +289,5 @@
     }
     .our-socials {
         display: none;
-    }
-    .craft-wrapper {
-        max-width: 350px;
-    }
-    .white-box {
-        max-width: 300px;
     }
 }

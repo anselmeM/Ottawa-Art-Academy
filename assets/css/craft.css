@@ -1,3 +1,8 @@
+.craft {
+    padding: 60px 0 80px 0;
+    background-color: var(--bg-primary);
+}
+
 .craft-wrapper {
     max-width: 1000px;
     margin: 0 auto;
@@ -34,8 +39,8 @@
     border-color: var(--accent-color);
 }
 
-/* Alternate flex directions */
-.craft-content-wrapper:nth-of-type(even) {
+/* Alternate flex directions — only on portfolio items */
+.portfolio-item:nth-of-type(even) {
     flex-direction: row-reverse;
 }
 
@@ -182,17 +187,18 @@
 }
 
 .lightbox-close {
-    position: absolute;
-    top: -40px;
-    right: 0;
+    position: fixed;
+    top: 30px;
+    right: 30px;
     background: none;
     border: none;
     color: #fff;
-    font-size: 30px;
+    font-size: 36px;
     cursor: pointer;
     line-height: 1;
     opacity: 0.7;
     transition: var(--transition-fast);
+    z-index: 2001;
 }
 
 .lightbox-close:hover {
@@ -337,4 +343,63 @@
 
 .white-box {
     display: none; /* Hide old white block placeholder */
+}
+
+/* Responsive: Gallery & Pricing */
+@media (max-width: 900px) {
+    .craft-content-wrapper {
+        flex-direction: column !important;
+        gap: 20px;
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+
+    .craft-content-box1 {
+        width: 100%;
+    }
+
+    .craft-content-box2 {
+        width: 100%;
+    }
+
+    .craft-content-box2__heading {
+        font-size: 24px;
+    }
+
+    .enrolment-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .craft-pricing {
+        width: 100%;
+    }
+
+    .portfolio-filter {
+        gap: 10px;
+    }
+
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 600px) {
+    .craft {
+        padding: 40px 0 60px 0;
+    }
+
+    .craft-content-box2__heading {
+        font-size: 20px;
+    }
+
+    .craft-content-box2__article {
+        font-size: 13px;
+    }
+
+    .lightbox-close {
+        top: 15px;
+        right: 15px;
+    }
 }
